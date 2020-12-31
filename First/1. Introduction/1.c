@@ -6,6 +6,6 @@
 void main()
 {
     // clrscr(); // For Turbo C++
-    printf("Hello World!\n");
+    printf("Hello, World!\n");
     // getch(); // For Turbo C++
 }
