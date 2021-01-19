@@ -5,11 +5,12 @@
 
 void main()
 {
+    char a, b;
+
     // clrscr(); // For Turbo C++
-    char a;
     printf("Enter a character\n");
     scanf("%c", &a);
-    int b = a;
+    b = a;
 
     printf("The ASCII value of '%c' is '%d'\n", a, b);
     // getch(); // For Turbo C++

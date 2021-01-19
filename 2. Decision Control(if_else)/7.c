@@ -5,10 +5,10 @@
 
 void main()
 {
-    // clrscr(); // For Turbo C++
     char alpbt, a, z, A, Z;
     int ascii_alpbt, ascii_a, ascii_z, ascii_A, ascii_Z;
 
+    // clrscr(); // For Turbo C++
     printf("Enter the character\n");
     scanf("%c", &alpbt);
 

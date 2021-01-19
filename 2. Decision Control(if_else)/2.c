@@ -5,8 +5,9 @@
 
 void main()
 {
-    // clrscr(); // For Turbo C++
     char chrctr;
+
+    // clrscr(); // For Turbo C++
     printf("Enter the character\n");
     scanf("%c", &chrctr);
 

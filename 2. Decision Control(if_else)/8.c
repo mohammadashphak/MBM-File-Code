@@ -5,9 +5,9 @@
 
 void main()
 {
-    // clrscr(); // For Turbo C++
     int marks;
 
+    // clrscr(); // For Turbo C++
     printf("Enter your marks\n");
     scanf("%d", &marks);
     if (marks < 0 || marks > 100)

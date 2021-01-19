@@ -5,9 +5,9 @@
 
 void main()
 {
-    // clrscr(); // For Turbo C++
     int a, b, c;
 
+    // clrscr(); // For Turbo C++
     printf("Enter the value of first integer\n");
     scanf("%d", &a);
 

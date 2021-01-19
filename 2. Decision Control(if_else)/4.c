@@ -6,9 +6,9 @@
 
 void main()
 {
-    // clrscr(); // For Turbo C++
     int a, b, c, d;
 
+    // clrscr(); // For Turbo C++
     printf("Enter the coefficient of x square\n");
     scanf("%d", &a);
 
