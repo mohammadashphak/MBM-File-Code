@@ -6,9 +6,9 @@
 void main()
 {
     // clrscr(); // For Turbo C++
-    printf("The size of the integer is %d\n", sizeof(int));
-    printf("The size of the float is %d\n", sizeof(float));
-    printf("The size of the double is %d\n", sizeof(double));
-    printf("The size of the character is %d\n", sizeof(char));
+    printf("Size of int: %d bytes\n", sizeof(int));
+    printf("Size of float: %d bytes\n", sizeof(float));
+    printf("Size of double: %d bytes\n", sizeof(double));
+    printf("Size of char: %d byte\n", sizeof(char));
     // getch(); // For Turbo C++
 }

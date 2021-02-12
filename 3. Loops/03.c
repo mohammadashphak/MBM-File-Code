@@ -8,7 +8,7 @@ void main()
     int i, num;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the number of which you want to get multiplication table\n");
+    printf("Enter the number of which you want to get multiplication table: ");
     scanf("%d", &num);
 
     printf("*****Multiplication table of %d.*****\n", num);

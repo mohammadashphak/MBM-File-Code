@@ -1,4 +1,4 @@
-// C Program to convert marks of a students in Grade\n system.
+// C Program to convert marks of a students in Grade system.
 
 #include <stdio.h>
 // #include <conio.h> // For Turbo C++
@@ -8,7 +8,7 @@ void main()
     int marks;
 
     // clrscr(); // For Turbo C++
-    printf("Enter your marks\n");
+    printf("Enter your marks" ");
     scanf("%d", &marks);
     if (marks < 0 || marks > 100)
     {

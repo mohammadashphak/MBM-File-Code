@@ -1,36 +1,49 @@
 // C Program to Display Armstrong Number Between Two Intervals.
 
 #include <stdio.h>
+#include <math.h>
 // #include <conio.h> // For Turbo C++
 
 void main()
 {
-    int i, num1, num2, num, sum, single;
+    int i, count, low, up, n, result, originalNum;
 
     // clrscr(); // For Turbo C++
 
-    printf("Enter the first number\n");
-    scanf("%d", &num1);
+    printf("Enter the lower endpoint: ");
+    scanf("%d", &low);
 
-    printf("Enter the second number\n");
-    scanf("%d", &num2);
+    printf("Enter the upper endpoint: ");
+    scanf("%d", &up);
 
-    printf("********************\n");
-    for (num = num1; num <= num2; num++)
+    printf("Armstrong numbers between %d and %d are: ", low, up);
+
+    for (n = low; n <= up; n++)
     {
-        sum = 0;
-        single = num;
+        result = 0;
+        originalNum = n;
 
-        for (i = 1; single; i++)
+        count = 0;
+
+        while (n != 0)
         {
-            sum = sum + (single % 10) * (single % 10) * (single % 10);
-            single /= 10;
+            n /= 10;
+            count++;
         }
 
-        if (sum == num)
+        n = originalNum;
+
+        while (n != 0)
         {
-            printf("%d\n", num);
+            result = result + pow((n % 10), count);
+            n /= 10;
         }
+
+        if (result == originalNum)
+        {
+            printf("%d ", originalNum);
+        }
+        n = originalNum;
     }
 
     // getch(); // For Turbo C++

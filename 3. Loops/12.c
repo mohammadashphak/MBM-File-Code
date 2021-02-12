@@ -1,35 +1,43 @@
 // C Program to Check Whether a Number is Prime or Not.
 
 #include <stdio.h>
+#include <math.h>
 // #include <conio.h> // For Turbo C++
 
 void main()
 {
-    int i, num, true_false;
+    int num, i, flag;
 
     // clrscr(); // For Turbo C++
-
-    printf("Enter the number\n");
+    printf("Enter a positive integer: ");
     scanf("%d", &num);
 
     if (num > 1)
     {
-        for (i = 2; i < num; i++)
+        flag = 1;
+
+        for (i = 2; i <= sqrt(num); ++i)
         {
+
+            // condition for non-prime
             if (num % i == 0)
             {
-                true_false = 1;
+                flag = 0;
+                break;
             }
         }
-
-        if (true_false == 1)
+        if (flag == 0)
         {
-            printf("%d is not a prime number\n", num);
+            printf("%d is not a prime number.", num);
         }
         else
         {
-            printf("%d is a prime number\n", num);
+            printf("%d is a prime number.", num);
         }
+    }
+    else if (num == 1)
+    {
+        printf("1 is neither prime nor composite.");
     }
     else
     {

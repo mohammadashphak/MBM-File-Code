@@ -1,40 +1,42 @@
 // C Program to Display Prime Numbers Between Two Intervals.
 
 #include <stdio.h>
+#include <math.h>
 // #include <conio.h> // For Turbo C++
 
 void main()
 {
-    int i, n, num1, num2, true_false;
+    int i, n, low, up, flag;
 
     // clrscr(); // For Turbo C++
 
-    printf("Enter the first number\n");
-    scanf("%d", &num1);
+    printf("Enter lower endpoint: ");
+    scanf("%d", &low);
 
-    printf("Enter the second number\n");
-    scanf("%d", &num2);
+    printf("Enter upper endpoint: ");
+    scanf("%d", &up);
 
-    printf("*****************************\n");
+    printf("Prime numbers between %d and %d are: ", low, up);
 
-    for (n = num1 + 1; n < num2; n++)
+    for (n = low; n <= up; n++)
     {
         if (n > 1)
         {
-            true_false = 1;
-            for (i = 2; i < n; i++)
+            flag = 1;
+
+            for (i = 2; i <= sqrt(n); ++i)
             {
+
+                // condition for non-prime
                 if (n % i == 0)
                 {
-                    true_false = 0;
+                    flag = 0;
                     break;
                 }
-                true_false = 1;
             }
-
-            if (true_false == 1)
+            if (flag == 1)
             {
-                printf("%d\n", n);
+                printf("%d ", n);
             }
         }
     }

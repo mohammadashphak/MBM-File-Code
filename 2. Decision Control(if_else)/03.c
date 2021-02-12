@@ -5,29 +5,29 @@
 
 void main()
 {
-    int a, b, c;
+    int num1, num2, num3;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the value of first integer\n");
-    scanf("%d", &a);
+    printf("Enter 1st number: ");
+    scanf("%d", &num1);
 
-    printf("Enter the value of second integer\n");
-    scanf("%d", &b);
+    printf("Enter 2nd number: ");
+    scanf("%d", &num2);
 
-    printf("Enter the value of third integer\n");
-    scanf("%d", &c);
+    printf("Enter 3rd number: ");
+    scanf("%d", &num3);
 
-    if (a > b && a > c)
+    if (num1 > num2 && num1 > num3)
     {
-        printf("The largest integer among three you entered is %d\n", a);
+        printf("The largest number among three you entered is %d\n", num1);
     }
-    else if (b > c)
+    else if (num2 > num3)
     {
-        printf("The largest integer among three you entered is %d\n", b);
+        printf("The largest number among three you entered is %d\n", num2);
     }
     else
     {
-        printf("The largest integer among three you entered is %d\n", c);
+        printf("The largest number among three you entered is %d\n", num3);
     }
 
     // getch(); // For Turbo C++

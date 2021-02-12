@@ -8,11 +8,11 @@ void main()
     float a, b;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the value of first number\n");
+    printf("Enter first number: ");
     scanf("%f", &a);
 
-    printf("Enter the value of second number\n");
+    printf("Enter second number: ");
     scanf("%f", &b);
-    printf("Product of numbers is %f\n", a * b);
+    printf("Product of numbers = %f", a * b);
     // getch(); // For Turbo C++
 }

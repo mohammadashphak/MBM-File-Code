@@ -5,21 +5,24 @@
 
 void main()
 {
-    int i, num, sum;
+    long long num;
+    int count;
 
     // clrscr(); // For Turbo C++
+    printf("Enter an integer: ");
+    scanf("%lld", &num);
 
-    printf("Enter the numbeer\n");
-    scanf("%d", &num);
+    count = 0;
 
-    sum = 0;
-    while (num)
+    // iterate until n becomes 0
+    // remove last digit from n in each iteration
+    // increase count by 1 in each iteration
+    while (num != 0)
     {
-        sum += 1;
-        num = num / 10;
+        num /= 10;
+        count++;
     }
-
-    printf("%d", sum);
+    printf("Number of digits: %d", count);
 
     // getch(); // For Turbo C++
 }

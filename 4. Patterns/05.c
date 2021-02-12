@@ -1,9 +1,9 @@
 /* 
 Print the following pattern.
-*****
-****
-***
-**
+* * * * * 
+* * * * 
+* * *
+* *
 *
 */
 
@@ -12,15 +12,17 @@ Print the following pattern.
 
 void main()
 {
-    int i, j;
+    int i, j, rows;
 
     // clrscr(); // For Turbo C++
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
 
-    for (i = 5; i > 0; i--)
+    for (i = rows; i >= 1; i--)
     {
         for (j = 1; j <= i; j++)
         {
-            printf("*");
+            printf("* ");
         }
         printf("\n");
     }

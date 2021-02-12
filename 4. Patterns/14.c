@@ -17,15 +17,17 @@ Print the following pattern.
 
 void main()
 {
-    int i, j, k;
+    int i, j, space, columns;
 
     // clrscr(); // For Turbo C++
+    printf("Enter the number of rows: ");
+    scanf("%d", &columns);
 
-    for (i = 1; i <= 10; i++)
+    for (i = 1; i <= columns; i++)
     {
         if (i <= 5)
         {
-            for (k = i - 1; k > 0; k--)
+            for (space = i - 1; space > 0; space--)
             {
                 printf(" ");
             }
@@ -37,7 +39,7 @@ void main()
         }
         else
         {
-            for (k = 10 - i; k > 0; k--)
+            for (space = 10 - i; space > 0; space--)
             {
                 printf(" ");
             }

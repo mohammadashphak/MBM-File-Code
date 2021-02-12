@@ -5,35 +5,30 @@
 
 void main()
 {
-    int i, num, first, second, third;
+    int i, num, first, second, nextTerm;
 
     // clrscr(); // For Turbo C++
     first = 0;
     second = 1;
 
-    printf("Enter the number\n");
+    printf("Enter the number of terms: ");
     scanf("%d", &num);
 
     if (num < 1)
     {
         printf("Enter a valid number\n");
     }
-    else if (num == 1)
-    {
-        printf("0");
-    }
     else
     {
-        printf("0");
-        printf(",1");
-        for (i = 3; i <= num; i++)
+        printf("*****Fibonacci Series*****\n");
+        for (i = 1; i <= num - 1; i++)
         {
-            third = first + second;
-            printf(",%d", third);
-
+            printf("%d, ", first);
+            nextTerm = first + second;
             first = second;
-            second = third;
+            second = nextTerm;
         }
+        printf("%d", first);
     }
     // getch(); // For Turbo C++
 }

@@ -1,12 +1,12 @@
 /* 
 Print the following pattern.
-*
-**
-* *
-*  *
-*   *
-*    *
-******* 
+* 
+* * 
+*   * 
+*     *
+*       *
+*         *
+* * * * * * *
 &
 */
 
@@ -15,30 +15,26 @@ Print the following pattern.
 
 void main()
 {
-    int i, j;
+    int i, j, rows;
 
     // clrscr(); // For Turbo C++
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
 
-    for (i = 1; i <= 7; i++)
+    for (i = 1; i <= rows; i++)
     {
         for (j = 1; j <= i; j++)
         {
-            if (i < 7)
+            if (j == 1 || i == j || i == rows)
             {
-                if (j == 1 || j == i)
-                {
-                    printf("*");
-                }
-                else
-                {
-                    printf(" ");
-                }
+                printf("* ");
             }
-            else if (i == 7)
+            else
             {
-                printf("*");
+                printf("  ");
             }
         }
+
         printf("\n");
     }
 

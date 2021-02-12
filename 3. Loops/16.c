@@ -9,18 +9,17 @@ void main()
 
     // clrscr(); // For Turbo C++
 
-    printf("Enter the number\n");
+    printf("Enter a positive integer: ");
     scanf("%d", &num);
 
-    printf("********************\n");
+    printf("Factors of %d are: ", num);
     for (i = 1; i <= num; i++)
     {
         if (num % i == 0)
         {
-            printf("%d\n", i);
+            printf("%d ", i);
         }
     }
-    printf("********************\n");
 
     // getch(); // For Turbo C++
 }

@@ -8,17 +8,17 @@ void main()
     int num;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the integer\n");
+    printf("Enter an integer: ");
     scanf("%d", &num);
 
+    // True if num is perfectly divisible by 2
     if (num % 2 == 0)
     {
-        printf("The number you entered is even.\n");
+        printf("%d is an even number.", num);
     }
     else
     {
-        printf("The number you entered is odd.\n");
+        printf("%d is an odd number.", num);
     }
-
     // getch(); // For Turbo C++
 }

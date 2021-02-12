@@ -5,15 +5,19 @@
 
 void main()
 {
-    int i, num;
+    int n, rev;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the number\n");
-    scanf("%d", &num);
-    while (num)
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    rev = 0;
+
+    while (n != 0)
     {
-        printf("%d", num % 10);
-        num = num / 10;
+        rev = rev * 10 + n % 10;
+        n /= 10;
     }
+    printf("Reversed number = %d", rev);
     // getch(); // For Turbo C++
 }

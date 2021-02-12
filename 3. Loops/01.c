@@ -10,12 +10,12 @@ void main()
     // clrscr(); // For Turbo C++
     sum = 0;
 
-    printf("Enter the number till which you want to get sum\n");
+    printf("Enter the number till which you want to get sum: ");
     scanf("%d", &n);
 
     for (i = 1; i <= n; i++)
     {
-        sum = sum + i;
+        sum += i;
     }
 
     printf("The sum of first %d natural numbers is %d.\n", n, sum);

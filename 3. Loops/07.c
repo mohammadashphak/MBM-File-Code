@@ -5,16 +5,12 @@
 
 void main()
 {
-    int i;
-    char A, Z;
+    char c;
 
     // clrscr(); // For Turbo C++
-    A = 'A';
-    Z = 'Z';
-
-    for (i = 0; i < 26; i++)
+    for (c = 'A'; c <= 'Z'; c++)
     {
-        printf("%c\n", A + i);
+        printf("%c ", c);
     }
     // getch(); // For Turbo C++
 }

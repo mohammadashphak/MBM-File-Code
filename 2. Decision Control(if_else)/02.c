@@ -5,20 +5,20 @@
 
 void main()
 {
-    char chrctr;
+    char c;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the character\n");
-    scanf("%c", &chrctr);
+    printf("Enter an alphabet: ");
+    scanf("%c", &c);
 
-    if (chrctr == 'a' || chrctr == 'e' || chrctr == 'i' || chrctr == 'o' || chrctr == 'u' || chrctr == 'A' || chrctr == 'E' || chrctr == 'I' || chrctr == 'O' || chrctr == 'U')
+    // evaluates to 1 (true) if c is a vowel
+    if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
     {
-        printf("The character you entered is vowel.\n");
+        printf("%c is a vowel.", c);
     }
     else
     {
-        printf("The character you entered is consonant.\n");
+        printf("%c is a consonant.", c);
     }
-
     // getch(); // For Turbo C++
 }

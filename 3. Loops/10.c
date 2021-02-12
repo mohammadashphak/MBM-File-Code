@@ -5,20 +5,21 @@
 
 void main()
 {
-    int i, num, power, result;
+    int base, power;
+    long long result;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the number\n");
-    scanf("%d", &num);
-
-    printf("Enter the power digit\n");
+    printf("Enter a base number: ");
+    scanf("%d", &base);
+    printf("Enter a power digit: ");
     scanf("%d", &power);
 
     result = 1;
 
-    for (i = 1; i <= power; i++)
+    while (power != 0)
     {
-        result = result * num;
+        result *= base;
+        power--;
     }
 
     printf("The result is %d.", result);

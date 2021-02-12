@@ -6,7 +6,7 @@
 
 void main()
 {
-    int a, b, c, d;
+    int a, b, c, discriminant;
 
     // clrscr(); // For Turbo C++
     printf("Enter the coefficient of x square\n");
@@ -18,26 +18,31 @@ void main()
     printf("Enter the numerical value\n");
     scanf("%d", &c);
 
-    d = (b * b - 4 * a * c);
+    discriminant = (b * b - 4 * a * c);
     if (a != 0)
     {
-        if (d > 0)
+        if (discriminant > 0)
         {
-            printf("Roots of quadratic equation are %0.2f and %0.2f\n", (-b + sqrt(d)) / (2 * a), (-b - sqrt(d)) / (2 * a));
+            printf("Roots are real and different.\n");
+            printf("Root1 = %0.2f\n", (-b + sqrt(discriminant)) / (2.0 * a));
+            printf("Root2 = %0.2f", (-b - sqrt(discriminant)) / (2.0 * a));
         }
-        else if (d == 0)
+        else if (discriminant == 0)
         {
-            printf("Roots of quadratic equation are equal and are %0.2f\n", (-b + sqrt(d)) / (2 * a));
+            printf("Roots are real and same.\n");
+            printf("Root1 = Root2 = %0.2f", -b / (2.0 * a));
         }
 
         else
         {
-            printf("Roots of quadratic equation are (-%d+i(%0.2f))/%d and (-%d-i(%0.2f))/%d\n", b, sqrt(-d), 2 * a, b, sqrt(-d), 2 * a);
+            printf("Roots are complex and different.\n");
+            printf("Root1 = %0.2f + i(%0.2f)\n", -b / (2.0 * a), sqrt(-discriminant) / (2.0 * a));
+            printf("Root2 = %0.2f - i(%0.2f)", -b / (2.0 * a), sqrt(-discriminant) / (2.0 * a));
         }
     }
     else
     {
-        printf("its not a quadratic equation\n");
+        printf("Its not a quadratic equation.");
     }
 
     // getch(); // For Turbo C++

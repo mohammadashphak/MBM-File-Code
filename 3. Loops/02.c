@@ -5,20 +5,26 @@
 
 void main()
 {
-    int i, n, fctrl;
+    int i, n;
+    unsigned long long fact;
 
     // clrscr(); // For Turbo C++
-    fctrl = 1;
+    fact = 1;
 
-    printf("Enter the number of which you want to get factorial\n");
+    printf("Enter the number of which you want to get factorial: ");
     scanf("%d", &n);
-
-    for (i = 1; i <= n; i++)
+    if (n < 0)
     {
-        fctrl = fctrl * i;
+        printf("Error! Factorial of a negative number doesn't exist.");
     }
-
-    printf("The factorial of %d is %d.\n", n, fctrl);
+    else
+    {
+        for (i = 1; i <= n; i++)
+        {
+            fact *= i;
+        }
+        printf("Factorial of %d = %llu.\n", n, fact);
+    }
 
     // getch(); // For Turbo C++
 }

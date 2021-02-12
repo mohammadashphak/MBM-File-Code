@@ -5,20 +5,23 @@
 
 void main()
 {
-    int a, b, temp;
+    int num1, num2, temp;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the value of first integer\n");
-    scanf("%d", &a);
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
 
-    printf("Enter the value of second integer\n");
-    scanf("%d", &b);
+    // Value of num1 is assigned to temp
+    temp = num1;
 
-    // Swap using temporary variable
-    temp = a;
-    a = b;
-    b = temp;
+    // Value of num2 is assigned to num1
+    num1 = num2;
 
-    printf("Now, the value of first integer is %d and the value of second integer is %d\n", a, b);
+    // Value of temp (initial value of num1) is assigned to num2
+    num2 = temp;
+
+    printf("\nAfter swapping...\nfirst number = %d,\nsecond number = %d", num1, num2);
     // getch(); // For Turbo C++
 }

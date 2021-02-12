@@ -1,34 +1,45 @@
 // C Program to Check Armstrong Number.
 
 #include <stdio.h>
+#include <math.h>
 // #include <conio.h> // For Turbo C++
 
 void main()
 {
-    int i, num, sum, single;
+    int i, num, result, originalNum, count;
 
     // clrscr(); // For Turbo C++
 
-    printf("Enter the number\n");
+    printf("Enter a number: ");
     scanf("%d", &num);
 
-    sum = 0;
-    single = num;
+    result = 0;
+    originalNum = num;
 
-    for (i = 1; single; i++)
+    count = 0;
+
+    while (num != 0)
     {
-        sum = sum + (single % 10) * (single % 10) * (single % 10);
-        single /= 10;
+        num /= 10;
+        count++;
     }
 
-    if (sum == num)
+    num = originalNum;
+
+    while (num != 0)
     {
-        printf("Armstrong.\n");
+        result = result + pow((num % 10), count);
+        num /= 10;
+    }
+
+    if (result == originalNum)
+    {
+        printf("%d is an Armstrong number.", originalNum);
     }
 
     else
     {
-        printf("Not a armstrong.\n");
+        printf("%d is not an Armstrong number.", originalNum);
     }
 
     // getch(); // For Turbo C++

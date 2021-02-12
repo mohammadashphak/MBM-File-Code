@@ -1,6 +1,7 @@
-// C Program to Find GCD of two Numbers.
+// C Program to Find GCD or HCF of two Numbers.
 
 #include <stdio.h>
+#include <math.h>
 // #include <conio.h> // For Turbo C++
 
 void main()
@@ -8,11 +9,14 @@ void main()
     int i, num1, num2;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the first number\n");
+    printf("Enter the first number: ");
     scanf("%d", &num1);
 
-    printf("Enter the second number\n");
+    printf("Enter the second number: ");
     scanf("%d", &num2);
+
+    num1 = abs(num1);
+    num2 = abs(num2);
 
     if (num1 > num2)
     {
@@ -20,7 +24,7 @@ void main()
         {
             if (num1 % i == 0 && num2 % i == 0)
             {
-                printf("The GCD of %d and %d is %d.\n", num1, num2, i);
+                printf("The GCD of %d and %d = %d.", num1, num2, i);
                 break;
             }
         }
@@ -31,7 +35,7 @@ void main()
         {
             if (num1 % i == 0 && num2 % i == 0)
             {
-                printf("The GCD of %d and %d is %d.\n", num1, num2, i);
+                printf("The GCD of %d and %d = %d.", num1, num2, i);
                 break;
             }
         }

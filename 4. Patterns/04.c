@@ -1,10 +1,10 @@
 /* 
 Print the following pattern.
-A
-BB
-CCC
-DDDD
-EEEEE
+A 
+B B
+C C C 
+D D D D 
+E E E E E
 */
 
 #include <stdio.h>
@@ -13,35 +13,21 @@ EEEEE
 void main()
 {
     int i, j;
+    char input, alphabet;
 
     // clrscr(); // For Turbo C++
+    printf("Enter an uppercase character you want to print in the last row: ");
+    scanf("%c", &input);
 
-    for (i = 1; i <= 5; i++)
+    alphabet = 'A';
+
+    for (i = 1; i <= (input - 'A' + 1); i++)
     {
         for (j = 1; j <= i; j++)
         {
-            switch (i)
-            {
-            case 1:
-                printf("A");
-                break;
-            case 2:
-                printf("B");
-                break;
-            case 3:
-                printf("C");
-                break;
-            case 4:
-                printf("D");
-                break;
-            case 5:
-                printf("E");
-                break;
-
-            default:
-                break;
-            }
+            printf("%c ", alphabet);
         }
+        alphabet++;
         printf("\n");
     }
 

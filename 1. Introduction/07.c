@@ -5,20 +5,19 @@
 
 void main()
 {
-    int a, b, temp;
+    int num1, num2;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the value of first integer\n");
-    scanf("%d", &a);
+    printf("Enter first number: ");
+    scanf("%d", &num1);
+    printf("Enter second number: ");
+    scanf("%d", &num2);
 
-    printf("Enter the value of second integer\n");
-    scanf("%d", &b);
+    // Swapping
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
 
-    // Swap without using temporary variable
-    a = a + b;
-    b = a - b;
-    a = a - b;
-
-    printf("Now, the value of first integer is %d and the value of second integer is %d\n", a, b);
+    printf("\nAfter swapping...\nfirst number = %d,\nsecond number = %d", num1, num2);
     // getch(); // For Turbo C++
 }

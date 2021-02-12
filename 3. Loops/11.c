@@ -6,30 +6,30 @@
 
 void main()
 {
-    int i, num, sum, single;
-    char arr[10];
+    int num, reversedNum, originalNum;
 
     // clrscr(); // For Turbo C++
-
-    printf("Enter the number\n");
+    printf("Enter an integer: ");
     scanf("%d", &num);
-    sum = 0;
-    single = num;
 
-    for (i = 0; single; i++)
+    originalNum = num;
+    reversedNum = 0;
+
+    // reversed integer is stored in reversedNum
+    while (num != 0)
     {
-        // arr[i] = num % 10;
-        sum = sum * 10 + single % 10;
-        single = single / 10;
-        // printf("%d\n", arr[i]);
+        reversedNum = reversedNum * 10 + num % 10;
+        num /= 10;
     }
-    if (num == sum)
+
+    // palindrome if orignalN and reversedNum are equal
+    if (originalNum == reversedNum)
     {
-        printf("Palindrome.\n");
+        printf("%d is a palindrome.", originalNum);
     }
     else
     {
-        printf("Not a palindrome.\n");
+        printf("%d is not a palindrome.", originalNum);
     }
 
     // getch(); // For Turbo C++
