@@ -18,7 +18,7 @@ void main()
     printf("Enter the numerical value\n");
     scanf("%d", &c);
 
-    discriminant = (b * b - 4 * a * c);
+    discriminant = b * b - 4 * a * c;
     if (a != 0)
     {
         if (discriminant > 0)
