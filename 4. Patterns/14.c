@@ -1,15 +1,15 @@
 /* 
 Print the following pattern.
-*****
- ****    
-  ***
-   **
-    *
-    *
-   **
-  ***
- ****
-*****
+* * * * * 
+  * * * *
+    * * * 
+      * *
+        *
+        *
+      * *
+    * * *
+  * * * *
+* * * * * 
 */
 
 #include <stdio.h>
@@ -20,35 +20,34 @@ void main()
     int i, j, space, columns;
 
     // clrscr(); // For Turbo C++
-    printf("Enter the number of rows: ");
+    printf("Enter the number of columns: ");
     scanf("%d", &columns);
+
+    for (i = columns; i >= 1; i--)
+    {
+        for (space = 1; space <= columns - i; space++)
+        {
+            printf("  ");
+        }
+
+        for (j = 1; j <= i; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
 
     for (i = 1; i <= columns; i++)
     {
-        if (i <= 5)
+        for (space = 1; space <= columns - i; space++)
         {
-            for (space = i - 1; space > 0; space--)
-            {
-                printf(" ");
-            }
-            for (j = 6 - i; j >= 1; j--)
-            {
-                printf("*");
-            }
-            printf("\n");
+            printf("  ");
         }
-        else
+        for (j = 1; j <= i; j++)
         {
-            for (space = 10 - i; space > 0; space--)
-            {
-                printf(" ");
-            }
-            for (j = 1; j <= i - 5; j++)
-            {
-                printf("*");
-            }
-            printf("\n");
+            printf("* ");
         }
+        printf("\n");
     }
 
     // getch(); // For Turbo C++

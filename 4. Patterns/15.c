@@ -1,14 +1,14 @@
 /* 
 Print the following pattern.
-    *
-   ***
-  *****
- *******
-*********
- *******
-  *****
-   ***
-    *
+        *
+      * * *
+    * * * * * 
+  * * * * * * * 
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
 */
 
 #include <stdio.h>
@@ -16,36 +16,36 @@ Print the following pattern.
 
 void main()
 {
-    int i, j, k;
+    int i, j, space, columns;
 
     // clrscr(); // For Turbo C++
+    printf("Enter the number of columns: ");
+    scanf("%d", &columns);
 
-    for (i = 1; i <= 9; i++)
+    for (i = 1; i <= columns; i++)
     {
-        if (i <= 5)
+        for (space = 1; space <= columns - i; space++)
         {
-            for (k = 5 - i; k > 0; k--)
-            {
-                printf(" ");
-            }
-            for (j = 1; j <= 2 * i - 1; j++)
-            {
-                printf("*");
-            }
-            printf("\n");
+            printf("  ");
         }
-        else
+        for (j = 1; j <= 2 * i - 1; j++)
         {
-            for (k = i - 5; k > 0; k--)
-            {
-                printf(" ");
-            }
-            for (j = 2 * (10 - i) - 1; j >= 1; j--)
-            {
-                printf("*");
-            }
-            printf("\n");
+            printf("* ");
         }
+        printf("\n");
+    }
+
+    for (i = columns - 1; i > 0; i--)
+    {
+        for (space = 1; space <= columns - i; space++)
+        {
+            printf("  ");
+        }
+        for (j = 1; j <= 2 * i - 1; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
     }
 
     // getch(); // For Turbo C++

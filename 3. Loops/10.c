@@ -16,13 +16,26 @@ void main()
 
     result = 1;
 
-    while (power != 0)
+    if (power >= 0)
     {
-        result *= base;
-        power--;
-    }
+        while (power != 0)
+        {
+            result *= base;
+            power--;
+        }
 
-    printf("The result is %d.", result);
+        printf("The result is %d.", result);
+    }
+    else
+    {
+        while (power != 0)
+        {
+            result *= base;
+            power++;
+        }
+
+        printf("The result is 1/%d.", result);
+    }
 
     // getch(); // For Turbo C++
 }

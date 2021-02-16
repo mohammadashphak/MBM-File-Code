@@ -15,20 +15,20 @@ void main()
     {
         if (year % 400 == 0)
         {
-            printf("%d is a leap year.\n", year);
+            printf("%d is a leap year.", year);
         }
         else
         {
-            printf("%d is not a leap year.\n", year);
+            printf("%d is not a leap year.", year);
         }
     }
     else if (year % 4 == 0)
     {
-        printf("%d is a leap year.\n", year);
+        printf("%d is a leap year.", year);
     }
     else
     {
-        printf("%d is not a leap year.\n", year);
+        printf("%d is not a leap year.", year);
     }
 
     // getch(); // For Turbo C++
