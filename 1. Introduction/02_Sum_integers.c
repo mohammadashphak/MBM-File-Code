@@ -1,4 +1,4 @@
-//                                                                               
+//
 
 #include <stdio.h>
 // #include <conio.h> // For Turbo C++

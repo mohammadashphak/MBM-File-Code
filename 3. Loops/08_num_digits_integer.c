@@ -22,7 +22,7 @@ void main()
         num /= 10;
         count++;
     }
-    printf("Number of digits: %d", count);
+    printf("Number of digits = %d", count);
 
     // getch(); // For Turbo C++
 }

@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 // #include <conio.h> // For Turbo C++
-void addMat(int **matrix1, int **matrix2, int rows, int columns);
+void addMat(int matrix1[][columns], int matrix2[][columns], int rows, int columns);
 
 void main()
 {
@@ -46,7 +46,7 @@ void main()
     // getch(); // For Turbo C++
 }
 
-void addMat(int **matrix1, int **matrix2, int rows, int columns)
+void addMat(int matrix1[][columns], int matrix2[][columns], int rows, int columns)
 {
     int i, j;
     printf("Sum of Matrix 1 and Matrix 2\n");

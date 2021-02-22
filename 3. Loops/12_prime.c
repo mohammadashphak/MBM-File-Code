@@ -9,14 +9,14 @@ void main()
     int num, i, flag;
 
     // clrscr(); // For Turbo C++
-    printf("Enter a positive integer: ");
+    printf("Enter an integer: ");
     scanf("%d", &num);
 
     if (num > 1)
     {
         flag = 1;
 
-        for (i = 2; i <= sqrt(num); ++i)
+        for (i = 2; i <= sqrt(num); i++)
         {
 
             // condition for non-prime
@@ -41,7 +41,7 @@ void main()
     }
     else
     {
-        printf("%d is not a prime number\n", num);
+        printf("%d is not a prime number.", num);
     }
 
     // getch(); // For Turbo C++

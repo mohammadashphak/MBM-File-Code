@@ -24,7 +24,7 @@ void main()
         {
             flag = 1;
 
-            for (i = 2; i <= sqrt(n); ++i)
+            for (i = 2; i <= sqrt(n); i++)
             {
 
                 // condition for non-prime

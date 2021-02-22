@@ -1,4 +1,4 @@
-// C Program to Find LCM of two Numbers.
+// C Program to Find GCD or HCF of two Numbers.
 
 #include <stdio.h>
 #include <math.h>
@@ -20,22 +20,22 @@ void main()
 
     if (num1 > num2)
     {
-        for (i = num1; i <= num1 * num2; i += num1)
+        for (i = num2; i > 0; i--)
         {
-            if (i % num1 == 0 && i % num2 == 0)
+            if (num1 % i == 0 && num2 % i == 0)
             {
-                printf("The LCM of %d and %d is %d.\n", num1, num2, i);
+                printf("GCD of %d and %d = %d.", num1, num2, i);
                 break;
             }
         }
     }
     else
     {
-        for (i = num2; i <= num1 * num2; i += num2)
+        for (i = num1; i > 0; i--)
         {
-            if (i % num1 == 0 && i % num2 == 0)
+            if (num1 % i == 0 && num2 % i == 0)
             {
-                printf("The LCM of %d and %d is %d.\n", num1, num2, i);
+                printf("GCD of %d and %d = %d.", num1, num2, i);
                 break;
             }
         }
