@@ -12,23 +12,23 @@ Print the following pattern.
 
 void main()
 {
-    int i, j, space, rows;
+  int i, j, space, rows;
 
-    // clrscr(); // For Turbo C++
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    for (i = 1; i <= rows; i++)
+  // clrscr(); // For Turbo C++
+  printf("Enter the number of rows: ");
+  scanf("%d", &rows);
+  for (i = 1; i <= rows; i++)
+  {
+    for (space = 1; space <= rows - i; space++)
     {
-        for (space = 1; space <= rows - i; space++)
-        {
-            printf("  ");
-        }
-        for (j = 1; j <= i; j++)
-        {
-            printf("* ");
-        }
-        printf("\n");
+      printf("  ");
     }
+    for (j = 1; j <= i; j++)
+    {
+      printf("* ");
+    }
+    printf("\n");
+  }
 
-    // getch(); // For Turbo C++
+  // getch(); // For Turbo C++
 }

@@ -10,8 +10,8 @@ void main()
     printf("Enter the number of elements: ");
     scanf("%d", &n);
 
-    int b[n];
     int a[n];
+    int b[n];
 
     if (n < 1)
     {

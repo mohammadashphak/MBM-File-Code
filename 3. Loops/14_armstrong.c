@@ -6,7 +6,7 @@
 
 void main()
 {
-    int i, num, result, originalNum, count;
+    int i, num, originalNum, count, result;
 
     // clrscr(); // For Turbo C++
 

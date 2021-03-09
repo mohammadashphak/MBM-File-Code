@@ -17,38 +17,38 @@ Print the following pattern.
 
 void main()
 {
-    int i, j, space, columns;
+  int i, j, space, columns;
 
-    // clrscr(); // For Turbo C++
-    printf("Enter the number of columns: ");
-    scanf("%d", &columns);
+  // clrscr(); // For Turbo C++
+  printf("Enter the number of columns: ");
+  scanf("%d", &columns);
 
-    for (i = columns; i >= 1; i--)
+  for (i = columns; i >= 1; i--)
+  {
+    for (space = 1; space <= columns - i; space++)
     {
-        for (space = 1; space <= columns - i; space++)
-        {
-            printf("  ");
-        }
-
-        for (j = 1; j <= i; j++)
-        {
-            printf("* ");
-        }
-        printf("\n");
+      printf("  ");
     }
 
-    for (i = 1; i <= columns; i++)
+    for (j = 1; j <= i; j++)
     {
-        for (space = 1; space <= columns - i; space++)
-        {
-            printf("  ");
-        }
-        for (j = 1; j <= i; j++)
-        {
-            printf("* ");
-        }
-        printf("\n");
+      printf("* ");
     }
+    printf("\n");
+  }
 
-    // getch(); // For Turbo C++
+  for (i = 1; i <= columns; i++)
+  {
+    for (space = 1; space <= columns - i; space++)
+    {
+      printf("  ");
+    }
+    for (j = 1; j <= i; j++)
+    {
+      printf("* ");
+    }
+    printf("\n");
+  }
+
+  // getch(); // For Turbo C++
 }

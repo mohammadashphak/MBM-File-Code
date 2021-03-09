@@ -1,9 +1,9 @@
 /* 
 Print the following pattern.
 1
-23
-456
-78910
+2 3
+4 5 6 
+7 8 9 10
 */
 
 #include <stdio.h>

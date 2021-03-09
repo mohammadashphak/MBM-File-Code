@@ -16,7 +16,7 @@ void main()
 
     if (n < 1)
     {
-        printf("Error! number should be greater than 0.\n");
+        printf("Error! number should be greater than 0.");
     }
     else
     {
