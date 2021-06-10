@@ -1,4 +1,4 @@
-// C Program to Check Armstrong Number Using User-defined Function.
+// C Program to Calculate Difference Between Two Time Periods.
 
 #include <stdio.h>
 // #include <conio.h> // For Turbo C++
